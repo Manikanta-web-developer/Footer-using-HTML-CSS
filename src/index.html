@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todo List App</title>
+  </head>
+  <body>
+    <div id="root">
+      <div className="App">
+        <h1>Todo List</h1>
+        <input
+          type="text"
+          onChange="completeTask()"
+          placeholder="Add a new task"
+        />
+        <button onClick="addTask()">Add</button>
+        <TaskList tasks="$(Task)" onTaskComplete="$(completeTask)" onTaskRemove="$(removeTask)" />
+      </div>
+      <div>
+          <div key={task.id} className="task ${task.completed ? 'completed' : '' }">
+            <input
+              type="checkbox"
+              checked="task.completed()"
+              onChange="Task()"
+            />
+            <span>Completed</span>
+            <button onClick="removeTask()">Remove</button>
+          </div>
+      </div>
+    </div>
+    <script src="App.js"></script>
+    <script src="index.js"></script>
+    <script src="Task.js"></script>
+    <script src="TaskList.js"></script>
+  </body>
+</html>

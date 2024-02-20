@@ -1,0 +1,95 @@
+/* src/index.css */
+
+/* Reset some default styles for consistency */
+body,
+h1,
+button,
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Apply some basic styles to the app container */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  color: #333;
+}
+
+/* Style the input for adding tasks */
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 8px;
+  width: 300px; /* Ensure a consistent width */
+}
+
+/* Style the button for adding tasks */
+button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 8px; /* Add some spacing to the left */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Style the individual task items */
+.task {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 8px;
+  margin: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 300px;
+}
+
+/* Add styles for completed tasks */
+.task.completed {
+  background-color: #e6e6e6;
+  text-decoration: line-through;
+}
+
+.task input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* Style the Remove button */
+.task button {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 4px 8px;
+  margin-left: 8px;
+}
+
+.task button:hover {
+  background-color: #cc0000;
+}
